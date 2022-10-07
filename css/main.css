@@ -96,6 +96,10 @@ footer{
 	height: 80%;
 	opacity: 0;
 	object-fit: contain;
+	-webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
 }
 
 .slide.full_bleed{
