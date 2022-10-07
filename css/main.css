@@ -42,6 +42,7 @@ footer{
 	padding: 1rem;
 	box-sizing: border-box;
 	z-index: 10;
+	margin: 0rem;
 }
 
 header{
@@ -110,3 +111,9 @@ footer{
 	object-fit: cover;
 }
 
+@media (max-width: 767px){
+	header,
+	footer{
+		padding: 0.25rem;
+	}
+}
