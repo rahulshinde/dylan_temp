@@ -41,7 +41,6 @@ footer{
 	right: 0;
 	padding: 1rem;
 	box-sizing: border-box;
-	mix-blend-mode: exclusion;
 	z-index: 10;
 }
 
