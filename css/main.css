@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'Fivo Sans';
+    src: url('../fonts/fivosansmodern-regular-oblique-webfont.woff2') format('woff2'),
+         url('../fonts/fivosansmodern-regular-oblique-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Fivo Sans';
+    src: url('../fonts/fivosansmodern-regular-webfont.woff2') format('woff2'),
+         url('../fonts/fivosansmodern-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+html{
+	font-size: 16px;
+}
+
+body{
+	font-family: 'Fivo Sans';
+	font-weight: 400;
+	font-size: 1rem;
+}
+
+h1{
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+a{
+	color: black;
+}
+
+header,
+footer{
+	position: fixed;
+	left: 0;
+	right: 0;
+	padding: 1rem;
+	box-sizing: border-box;
+	mix-blend-mode: exclusion;
+	z-index: 10;
+}
+
+header{
+	top: 0;
+}
+
+footer{
+	bottom: 0;
+}
+
+#slideshow_prev,
+#slideshow_next{
+	display: block;
+	position: absolute;
+	top: 10%;
+	bottom: 10%;
+	width: 50%;
+	height: 80%;
+	background: none;
+	outline: none;
+	border: none;
+}
+
+#slideshow_prev{
+	left: 0;
+	cursor: w-resize;
+}
+
+#slideshow_next{
+	right: 0;
+	cursor: e-resize;
+}
+
+#slideshow_wrapper{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+.slide.current{
+	opacity: 1;
+}
+
+.slide{
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 80%;
+	height: 80%;
+	opacity: 0;
+	object-fit: contain;
+}
+
+.slide.full_bleed{
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
