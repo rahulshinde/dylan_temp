@@ -1,12 +1,13 @@
 var slideshow_length,
     current_slide,
-    current;
+    current,
+    slideshowInterval;
 
 window.addEventListener('DOMContentLoaded', init);
 
 function init(){
   setupSlideshow();
-  console.log('hello');
+
 }
 
 function setupSlideshow(){
@@ -14,17 +15,31 @@ function setupSlideshow(){
   current_slide = 1;
   current = document.querySelector('.slide.current');
 
-  document.querySelector('#slideshow_prev').addEventListener('click', slideshowPrev);
-  document.querySelector('#slideshow_next').addEventListener('click', slideshowNext);
+  document.querySelector('#slideshow_prev').addEventListener('click', slideshowInteraction);
+  document.querySelector('#slideshow_next').addEventListener('click', slideshowInteraction);
   document.addEventListener('keyup', keyCommand);
   document.addEventListener('keyup', keyCommand);
+
+  slideshowInterval = setInterval(function(){
+    slideshowNext();
+  }, 1300);
 }
 
 function keyCommand(e){
+  clearInterval(slideshowInterval);
   if(e.keyCode === 37){
     slideshowPrev();
   }
   if(e.keyCode === 39){
+    slideshowNext();
+  }
+}
+
+function slideshowInteraction(e){
+  clearInterval(slideshowInterval);
+  if (e.target.id == 'slideshow_prev'){
+    slideshowPrev();
+  } else{
     slideshowNext();
   }
 }
